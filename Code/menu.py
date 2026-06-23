@@ -12,7 +12,7 @@ class Menu:
         self.rect = self.surf.get_rect(left=0, top=0)
 
     def run(self, ):
-        pygame.mixer_music.load('./assets/fase1.mp3')
+        pygame.mixer_music.load('./assets/menu.mp3')
         pygame.mixer_music.play(-1)
         while True:
             self.window.blit(source=self.surf, dest=self.rect)
