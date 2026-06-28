@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import pygame
 
-from Code.Const import WIN_WIDTH, COLOR_ORANGE, MENU_OPTION, C_WHITE
+from Code.Const import WIN_WIDTH, COLOR_ORANGE, MENU_OPTION, COLOR_WHITE
 
 
 class Menu:
@@ -12,7 +12,7 @@ class Menu:
         self.rect = self.surf.get_rect(left=0, top=0)
 
     def run(self, ):
-        pygame.mixer_music.load('./assets/menu.mp3')
+        pygame.mixer_music.load('./assets/Menu.mp3')
         pygame.mixer_music.play(-1)
         while True:
             self.window.blit(source=self.surf, dest=self.rect)
@@ -20,7 +20,7 @@ class Menu:
             self.menu_text(50, "Shooter", COLOR_ORANGE, ((WIN_WIDTH / 2), 120))
 
             for i in range(len(MENU_OPTION)):
-                self.menu_text(20, MENU_OPTION[i], C_WHITE, ((WIN_WIDTH / 2), 200 + 25*i))
+                self.menu_text(20, MENU_OPTION[i], COLOR_WHITE, ((WIN_WIDTH / 2), 200 + 25 * i))
 
             pygame.display.flip()
 
